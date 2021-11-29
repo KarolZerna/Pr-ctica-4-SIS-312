@@ -6,7 +6,7 @@ Feature: Login
 Background:
     Given I have browsed to page https://www.r-acad.com/wp-login.php
 
-Scenario: Valid credentials
+Scenario Outline: Valid credentials
     Given I have entered "<e-mail>" into the email field
     And I have entered "<password>" into the password field
     When I press the access button
