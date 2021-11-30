@@ -3,18 +3,20 @@ Given('I have browsed to the Rottweiler’s Academy login page') do
      visit('https://www.r-acad.com/wp-login.php')
   end
   
-  Given('I have entered {string} into the email field') do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  Given('I have entered {string} into the email field') do |eMail|
+    fill_in 'log', :with => eMail
+    
   end
   
-  Given('I have entered {string} into the password field') do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  Given('I have entered {string} into the password field') do |password|
+    fill_in 'pwd', :with => password
   end
   
   When('I press the access button') do
-    pending # Write code here that turns the phrase above into concrete actions
+    xpath = '//*[@id="wp-submit"]'
+    find(:xpath, xpath).click
   end
   
-  Then('I should see my user name {string} in the main page') do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  Then('I should see my welcome message {string} in the main page') do |userName|
+    page.should have_content(userName)
   end

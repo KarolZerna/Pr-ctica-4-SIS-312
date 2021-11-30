@@ -10,12 +10,12 @@ Scenario Outline: Valid credentials
     Given I have entered "<e-mail>" into the email field
     And I have entered "<password>" into the password field
     When I press the access button
-    Then I should see my user name "<username>" in the main page
+    Then I should see my welcome message "<username>" in the main page
 
 Examples:
-    | e-mail                      | password  | username |
-    | e.daniel.acero.r@gmail.com  | 1         | daniel   |
-    | karol.zerna@ucb.edu.bo      | test_2021 | karol    |
+    | e-mail                      | password  | username      |
+    | e.daniel.acero.r@gmail.com  | 1         |  Hola 123     |
+    | karol.zerna@ucb.edu.bo      | test_2021 | Hola Karol    |
 
 # Scenario Outline: Invalid email
 #     Given I have entered "<e-mail>" into the email field
