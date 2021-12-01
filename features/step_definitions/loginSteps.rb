@@ -31,11 +31,11 @@ Then('I should see an message {string}') do |passwordMessage|
   page.has_content?(passwordMessage)
 end
 
-Then('I should see {string} message') do |passwordEmpty|
+Then('I should see {string} as a message') do |passwordEmpty|
   page.has_content?(passwordEmpty)
 end
 
-Then('I should see {string} error message') do |noPassword|
+Then('I should see {string} as an error message') do |noPassword|
   page.has_content?(noPassword)
 end
 

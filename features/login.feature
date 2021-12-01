@@ -43,7 +43,7 @@ Examples:
 Scenario Outline: No password
     Given I have entered "<e-mail>" into the email field
     When I press the access button
-    Then I should see "el campo de la contraseña está vacío." message
+    Then I should see "el campo de la contraseña está vacío." as a message
 
 Examples:
     | e-mail                        | 
@@ -53,7 +53,7 @@ Examples:
  Scenario Outline: No email
      Given I have entered "<password>" into de password field
      When I press the access button
-     Then I should see "el campo del nombre de usuario está vacío." error message
+     Then I should see "el campo del nombre de usuario está vacío." as an error message
 Examples:
     | password    |
     | 4527751     |
