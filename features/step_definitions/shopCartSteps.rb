@@ -31,7 +31,7 @@ end
   end
 
   Given('I click on the cart icon which is in the upper right corner of the page') do
-    xpath = '//*[@id="header-aside"]/div/div[1]/a/span/span'
+    xpath = '/html/body/div[1]/header/div[1]/div[2]/div/div[1]/a'
     find(:xpath, xpath).click
   end
   
@@ -41,15 +41,15 @@ end
   end
 
   When('I click on the ‘x’ icon that is next to the course') do
-    xpath = '//*[@id="header-aside"]/div/div[1]/section/div/ul/li/a[1]'
+    xpath = '/html/body/div[1]/header/div[1]/div[2]/div/div[1]/section/div/ul/li/a[1]'
     find(:xpath, xpath).click
   end
 
-  Then('I click on the cart icon') do
-    pending # Write code here that turns the phrase above into concrete actions
+  Then('I wait for the course to be removed from the cart') do
+    sleep 5
   end
-  
-  Then('I should’n see courses but I can see a message') do
-    pending # Write code here that turns the phrase above into concrete actions
+
+  Then('I should’n see courses but I can see a message {string}') do |emptycartmessage|
+    page.should have_content(emptycartmessage)
   end
   

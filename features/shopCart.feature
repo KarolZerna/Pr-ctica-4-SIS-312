@@ -25,7 +25,6 @@ Scenario: Remove a course from my cart
     Given I click on the cart icon which is in the upper right corner of the page
     Then I should see a the course that I have ordered already
     When I click on the ‘x’ icon that is next to the course
-    Then I click on the cart icon
-    And I should’n see courses but I can see a message 
-
-
+    Then I wait for the course to be removed from the cart
+    Then I click on the cart icon which is in the upper right corner of the page
+    And I should’n see courses but I can see a message "No hay productos en el carrito."
