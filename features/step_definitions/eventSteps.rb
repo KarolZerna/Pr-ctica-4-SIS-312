@@ -13,5 +13,5 @@ And('I click on Eventos Anteriores') do
 end
 
 Then('I should see a new page about past events of Rottweiler’s Academy like {string}') do |string|
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+    
+end
