@@ -1,21 +1,24 @@
-Given('I find the {string} course') do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+Given('I find the {string} course') do |milk|
+  page.should have_content(milk)
+end
+  
+  Given('I click on Como hacer milkshakes') do
+    xpath = '/html/body/div[1]/header/div[2]/div[1]/div[3]/div/section/div/ul/li[2]/a[2]'
+    find(:xpath, xpath).click
   end
   
-  Given('I click on it') do
-    pending # Write code here that turns the phrase above into concrete actions
+  Given('I’m able to see the {description} of the course') do |des|
+    # /html/body/div[1]/div/div/div/div/main/div[2]/div[3]/div/h2
+    page.should have_content(des)
   end
   
-  Given('I’m able to see the description of the course') do
-    pending # Write code here that turns the phrase above into concrete actions
+  Given('I click on the Sign up button') do
+    xpath = '/html/body/div[1]/header/div[1]/div[2]/div/div[2]/a[2]'
+    find(:xpath, xpath).click
   end
   
-  Given('I click on the “sign up” button') do
-    pending # Write code here that turns the phrase above into concrete actions
-  end
-  
-  Then('I should see a new page with the option “add to cart”') do
-    pending # Write code here that turns the phrase above into concrete actions
+  Then('I should see a new page with the option {string}}') do |add|
+    page.should have_content(des)
   end
   
   Then('click on it') do
