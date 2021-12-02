@@ -5,27 +5,27 @@ Feature: Shopping Cart
 
 Background:
     Given I have browsed to the Rottweiler’s Academy course page
-    Then I see the Rottweiler’s Academy full course catalog with "Cursos" title
+    And I see the Rottweiler’s Academy full course catalog with "Cursos" title
+    And I find the "Como hacer milkshakes" course
+    And I click on Como hacer milkshakes
+    And I’m able to see the "Ver detalles de Curso" title
+    When I click on the Sign up button
+    And I should see a new page with the option "Añadir al carrito"
+    Then click on Añadir al carrito
 
 Scenario: Add a course to my cart
-    Given I find the "Como hacer milkshakes" course
-    And I click on Como hacer milkshakes
-    And I’m able to see the "Description" of the course
-    When I click on the Sign up button
-    Then I should see a new page with the option "add to cart"
-    And click on it
-    And now I should see the cart with a red tag that increases in 1
+    Given I should see the cart with a red tag that increases in 1
 
 Scenario: Check my products
-    Given I have one or more products in my cart that is shown with a red tag with the current product quantity
-    When I click on the cart icon which is in the upper right corner  of the page
-    Then I should see a drop down list with the courses I have ordered already
+    Given I click on the cart icon which is in the upper right corner of the page
+    Then I should see a the course that I have ordered already
 
+@prueba
 Scenario: Remove a course from my cart
-    Given I click on the cart icon
-    And I see the “Como hacer milkshakes” course on the cart list 
+    Given I click on the cart icon which is in the upper right corner of the page
+    Then I should see a the course that I have ordered already
     When I click on the ‘x’ icon that is next to the course
-    Then I should see the cart with a red tag that decreases in 1
-    And I shouldn’t see the “Como hacer milkshakes” course on the cart list anymore.
+    Then I click on the cart icon
+    And I should’n see courses but I can see a message 
 
 
