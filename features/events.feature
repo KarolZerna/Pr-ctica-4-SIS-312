@@ -5,6 +5,7 @@ Feature: Events
 
 Background:
     Given I have browsed to the Rottweiler’s Academy course page
+    Then I see the Rottweiler’s Academy full course catalog with "Cursos" title
 
 Scenario: Check events
     Given I click on the “Eventos” section that is on the upper left corner of the page
