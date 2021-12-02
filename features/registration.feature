@@ -16,10 +16,8 @@ Scenario: Invalid data
     And I fill in the last name field with "SDFAFD"
     And I fill in the username field with "*A-*12"
     When I press the Crear una cuenta button
-    Then I should see an error message that explains the fields need to be in a correct format
+    Then I should see an error message "Please include an @ in the email address. Don't use numbers in your name. Don't use numbers in your last name." that explains the fields need to be in a correct format
 
 Scenario: Empty fields
     Given I press the Crear una cuenta button
-    Then I should see an error message that explains the data fields  need to be filled
-
-
+    Then I should see an error message "Este es un campo obligatorio." that explains the data fields need to be filled
