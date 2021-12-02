@@ -5,7 +5,7 @@ Feature: Login
 
 Background:
     Given I have browsed to the Rottweiler’s Academy login page 
-
+@a
 Scenario Outline: Valid credentials
     Given I have entered "<e-mail>" into the email field
     And I have entered "<password>" into the password field
@@ -15,7 +15,7 @@ Scenario Outline: Valid credentials
 Examples:
     | e-mail                      | password  | username      |
     | e.daniel.acero.r@gmail.com  | 1         |  Hola 123     |
- #   | karol.zerna@ucb.edu.bo      | test_2021 | Hola Karol    |
+    | karol.zerna@ucb.edu.bo      | test_2021 | Hola Karol    |
 
 Scenario Outline: Invalid email
     Given I have entered "<e-mail>" into the email field
@@ -38,7 +38,7 @@ Scenario Outline: Invalid password
 Examples:
     | e-mail                      | password    |
     | e.daniel.acero.r@gmail.com  | 4527751     |
-#    | karol.zerna@ucb.edu.bo      | test1_2021  |
+    | karol.zerna@ucb.edu.bo      | test1_2021  |
 
 Scenario Outline: No password
     Given I have entered "<e-mail>" into the email field
@@ -48,13 +48,14 @@ Scenario Outline: No password
 Examples:
     | e-mail                        | 
     | e.daniel.acero.r@gmail.com    | 
-#    | karol.zerna@ucb.edu.bo       | 
+    | karol.zerna@ucb.edu.bo        | 
 
- Scenario Outline: No email
-     Given I have entered "<password>" into de password field
-     When I press the access button
-     Then I should see "el campo del nombre de usuario está vacío." as an error message
+Scenario Outline: No email
+    Given I have entered "<password>" into de password field
+    When I press the access button
+    Then I should see "el campo del nombre de usuario está vacío." as an error message
+    
 Examples:
     | password    |
     | 4527751     |
-#   | test1_2021  |
+    | test1_2021  |
