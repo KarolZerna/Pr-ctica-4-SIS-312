@@ -12,6 +12,6 @@ And('I click on Eventos Anteriores') do
     find(:xpath, xpath).click
 end
 
-Then('I should see a new page about past events of Rottweiler’s Academy like {string}') do |string|
-    
+Then('I should see a new page about past events of Rottweiler’s Academy like {string}') do |event|
+    page.should have_content(event)
 end
