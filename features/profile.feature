@@ -4,7 +4,7 @@ Feature: Profile
     I want to see my account details
 
 Background:
-    Given I have browsed to page https://www.r-acad.com/wp-login.php
+    Given I have browsed to the Rottweiler’s Academy course page
     And I see the Rottweiler’s Academy page
     And I click on the button that says <username>
 
@@ -15,9 +15,9 @@ Scenario Outline: Correct account details
     Then I should see all my account details like <name> , <lastname> and <username>
 
 Examples:
-    | username    | name     | lastname   |
-    |   Karol     | Karol    |  Zerna     |
-    |   Daniel    | Daniel   | Acero      |
+    | username  | name     | lastname  |
+    | Karol     | Karol    | Zerna     |
+    | Daniel    | Daniel   | Acero     |
 
 
 Scenario Outline: Modify account details
@@ -32,9 +32,9 @@ Scenario Outline: Modify account details
     Then I should see a message with the confirmation "Cambios guardados"
 
 Examples:
-    | username    | name     | lastname    | updatedName     |
-    |   Karol     | Karol    |  Zerna      | Karol Lenny     |
-    |   Daniel    | Daniel   | Acero       | Edwin Daniel    |
+    | username  | name     | lastname  | updatedName     |
+    | Karol     | Karol    | Zerna     | Karol Lenny     |
+    | Daniel    | Daniel   | Acero     | Edwin Daniel    |
 
 
 
@@ -50,9 +50,9 @@ Scenario Outline: Send Messages
     Then I should see the "<message>" on the "<user>" chat
 
 Examples:
-    | user         | message                                | 
-    | Sebastián    |   hola amigos de Rottweiler Academy    | 
-    | Sebastian    |   hola instructor, saludos             |
+    | user         | message                              | 
+    | Sebastián    | hola amigos de Rottweiler Academy    | 
+    | Sebastian    | hola instructor, saludos             |
 
 Scenario Outline: Modify account details with valid data
 
@@ -66,6 +66,6 @@ Scenario Outline: Modify account details with valid data
     Then I should see an error message
 
 Examples:
-    | username    | name     | lastname   | updatedLastName          |
-    |   Karol     | Karol    |  Zerna     | *0ie03924390™£¢∞§¶•ªº–   |
-    |   Daniel    | Daniel   | Acero      | 1234567                  |
+    | username  | name     | lastname  | updatedLastName         |
+    | Karol     | Karol    | Zerna     | *0ie03924390™£¢∞§¶•ªº–  |
+    | Daniel    | Daniel   | Acero     | 1234567                 |
