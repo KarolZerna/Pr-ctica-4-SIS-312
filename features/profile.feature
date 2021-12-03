@@ -6,19 +6,13 @@ Feature: Profile
 Background:
     Given I have browsed to the Rottweiler’s Academy login page
     And I see the Rottweiler’s Academy page
-    And I click on the button that says "<username>"
+    And I click on "Karol" button that is on the upper right corner of the page
 
-Scenario Outline: Correct account details
+Scenario: Correct account details
 
     Given I click on the "Perfil" option from the dropdown menu
     When I click on the "Ver" option from the profile dropdown menu
-    Then I should see all my account details like "<name>" , "<lastname>" and "<username>"
-
-Examples:
-    | username  | name     | lastname  |
-    | Karol     | Karol    | Zerna     |
-    | Daniel    | Daniel   | Acero     |
-
+    Then I should see all my account details like "Karol" "Zerna" and "Karol"
 
 Scenario Outline: Modify account details
 
