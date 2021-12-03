@@ -1,7 +1,7 @@
 When('I click on the {string} option from the dropdown menu') do
     xpath = '/html/body/div[1]/header/div[1]/div[2]/div/div[1]/div/div/ul/li[2]/a'
     find(:xpath, xpath).click
-  end
+end
 
 Then('I should see all my account details like {string} , {string} and {string}') do |name, lastname, userName|
     find(:xpath, '/html/body/div[1]/div/div/div/div/main/article/div/div/div[2]/div/div/div/div/div/div/div/table/tbody/tr[1]/td[2]/p', :text => name)
@@ -41,7 +41,7 @@ end
   Then('I should see a message with the confirmation "Cambios guardados"') do 
     xpath ='/html/body/div[1]/div/div/div/div/main/article/div/div/div[1]/aside/p'
     find(:xpath, xpath).click   
-end
+  end
   
   Given('I see the inbox page') do
     pending # Write code here that turns the phrase above into concrete actions
@@ -54,15 +54,16 @@ end
   
   When('I write {string}') do |receptor|
     fill_in 'select2-search__field' :with => receptor
-end
+  end
   
   When('I click on the {string} text box') do |string|
     xpath = '/html/body/div[1]/div/div/div/div/main/article/div/div/div[2]/div/div/div/div/div/div/div[2]/form/div[3]/div[1]/div' 
     find(:xpath, xpath).click
-end
+  end
   
   Then('I should see the message sent on the "Sebastián" chat') do
-    pending # Write code here that turns the phrase above into concrete actions
+    xpath = '/html/body/div[1]/div/div/div/div/main/article/div/div/div[2]/div/div/div/div/div/div/div[2]/div/div[1]/div/header/dl/dt/span/a'
+    find(:xpath, xpath).click
   end
   
   When('I see {string} page') do |string|
