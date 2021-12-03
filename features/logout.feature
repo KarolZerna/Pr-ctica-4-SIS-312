@@ -12,5 +12,5 @@ Background:
 
 Scenario: Logout of the account
     Given I click on "Karol" button that is on the upper right corner of the page
-    And I click on Logout
+    When I click on Logout
     Then I should see a new page about Rottweiler’s Academy with the option "Iniciar sesión"
