@@ -5,7 +5,7 @@ Feature: Login
 
 Background:
     Given I have browsed to the Rottweiler’s Academy login page 
-@a
+@Valid
 Scenario Outline: Valid credentials
     Given I have entered "<e-mail>" into the email field
     And I have entered "<password>" into the password field
@@ -17,6 +17,7 @@ Examples:
     | e.daniel.acero.r@gmail.com  | 1         |  Hola 123     |
     | karol.zerna@ucb.edu.bo      | test_2021 | Hola Karol    |
 
+@Invalid
 Scenario Outline: Invalid email
     Given I have entered "<e-mail>" into the email field
     And I have entered "<password>" into the password field
