@@ -11,3 +11,8 @@ Given('I click on {string} button that is on the upper right corner of the page'
   Then('I should see a new page about Rottweiler’s Academy with the option {string}') do |login|
     page.should have_content(login)
   end
+
+Given('I go to my profile page') do
+  xpath = '/html/body/aside/div/div/ul/li[1]/a'
+  find(:xpath, xpath).click
+end
