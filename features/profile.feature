@@ -14,13 +14,13 @@ Background:
 @a
 Scenario: Correct account details
 
-    Given I click on the "Ver" option from the profile dropdown menu
+    Given I go to my profile page
     When I am at the Profile page
     Then I should see all my account details like "Karol" "Zerna" and "Karol"
 
 Scenario: Modify account details
 
-    Given I click on the "Ver" option from the profile dropdown menu
+    Given I go to my profile page
     And I see my account profile with details
     When I click on the "Editar el perfil" button
     And I see "Editar la información" de "Details" page
@@ -28,24 +28,24 @@ Scenario: Modify account details
     And I click the "Guardar los cambios" button
     Then I should see a message with the confirmation "Cambios guardados"
 
-Scenario: Send Messages
+# Scenario: Send Messages
 
-    Given I click on the "Mensajes" option from the dropdown menu
-    And I see the inbox page
-    When I click on the "Escriba los nombres de una o más personas" text field
-    And I write "Sebastián" 
-    And I click on text box
-    And I write on the "hola instructor, saludos" text box
-    And I click on the "Enviar" button
-    Then I should see the message sent on the "Sebastián" chat
+#     Given I click on "Karol" button that is on the upper right corner of the page
+#     And I click on the "Mensajes" option from the dropdown menu
+#     And I see the inbox page
+#     When I click on the "Escriba los nombres de una o más personas" text field
+#     And I write "Sebastián" 
+#     And I click on text box
+#     And I write on the "hola instructor, saludos" text box
+#     And I click on the "Enviar" button
+#     Then I should see the message sent on the "Sebastián" chat
 
-Scenario Outline: Modify account details with valid data
+# Scenario: Modify account details with valid data
 
-    Given I click on the "Perfil" option from the dropdown menu
-    And I click on the "Ver" option from the profile dropdown menu
-    And I see my account profile with details
-    When I click on the "Editar el perfil" button
-    And I see "Editar la información de Details" page
-    And I write "*0ie03924390™£¢∞§¶•ªº–" on the lastname field
-    And I click the "Guardar los cambios" button
-    Then I should see an error message
+#     Given I go to my profile page
+#     And I see my account profile with details
+#     When I click on the "Editar el perfil" button
+#     And I see "Editar la información de Details" page
+#     And I write "*0ie03924390™£¢∞§¶•ªº–" on the lastname field
+#     And I click the "Guardar los cambios" button
+#     Then I should see an error message

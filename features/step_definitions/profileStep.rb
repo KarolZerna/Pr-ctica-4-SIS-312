@@ -9,7 +9,7 @@ Then('I should see all my account details like {string} , {string} and {string}'
     find(:xpath, '/html/body/div[1]/div/div/div/div/main/article/div/div/div[2]/div/div/div/div/div/div/div/table/tbody/tr[3]/td[2]/p', :text => userName)
 end
   
-  Given('I click on the "Ver" option from the profile dropdown menu') do
+  Given('I click on the Ver option from the profile dropdown menu') do
     xpath = '/html/body/div[1]/header/div[1]/div[2]/div/div[1]/div/div/ul/li[2]/div/ul/li[1]/a'
     find(:xpath, xpath).click
   end
@@ -53,7 +53,7 @@ end
   end
   
   When('I write {string}') do |receptor|
-    fill_in 'select2-search__field' :with => receptor
+    fill_in'select2-search__field', :with => receptor
   end
   
   When('I click on the {string} text box') do |string|
@@ -80,11 +80,13 @@ end
 
 
   When('I am at the Profile page') do
-    pending # Write code here that turns the phrase above into concrete actions
+    page.should have_content("Ver Perfil")
   end
   
   Then('I should see all my account details like {string} {string} and {string}') do |string, string2, string3|
-    pending # Write code here that turns the phrase above into concrete actions
+    page.should have_content(string)
+    page.should have_content(string2)
+    page.should have_content(string3)
   end
   
   When('I click on the "Guardar los cambios" button') do
