@@ -1,12 +1,12 @@
-When('I click on the {string} option from the dropdown menu') do |string|
+When('I click on the {string} option from the dropdown menu') do
     xpath = '/html/body/div[1]/header/div[1]/div[2]/div/div[1]/div/div/ul/li[2]/a'
     find(:xpath, xpath).click
   end
 
-When('I click on the {string} option from the profile dropdown menu') do |string|
-    xpath = '/html/body/div[1]/header/div[1]/div[2]/div/div[1]/div/div/ul/li[2]/div/ul/li[1]/a'
-    find(:xpath, xpath).click
-  end
+#When('I click on the "Perfil" option from the profile dropdown menu') do
+ #   xpath = '/html/body/div[1]/header/div[1]/div[2]/div/div[1]/div/div/ul/li[2]/div/ul/li[1]/a'
+ #   find(:xpath, xpath).click
+ # end
   
   Then('I should see all my account details like {string} , {string} and {string}') do |name, lastname, userName|
     find(:xpath, '/html/body/div[1]/div/div/div/div/main/article/div/div/div[2]/div/div/div/div/div/div/div/table/tbody/tr[1]/td[2]/p', :text => name)
@@ -14,17 +14,20 @@ When('I click on the {string} option from the profile dropdown menu') do |string
     find(:xpath, '/html/body/div[1]/div/div/div/div/main/article/div/div/div[2]/div/div/div/div/div/div/div/table/tbody/tr[3]/td[2]/p', :text => userName)
 end
   
-  Given('I click on the {string} option from the profile dropdown menu') do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  Given('I click on the "Ver" option from the profile dropdown menu') do
+    xpath = '/html/body/div[1]/header/div[1]/div[2]/div/div[1]/div/div/ul/li[2]/div/ul/li[1]/a'
+    find(:xpath, xpath).click
   end
   
   Given('I see my account profile with details') do
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+    xpath = '/html/body/div[1]/div/div/div/div/main/article/div/div/div[2]/div/div/div/div/div/div/div/h3'
+    find(:xpath, xpath).click
+    end
   
-  When('I click on the {string} button') do |string|
-    pending # Write code here that turns the phrase above into concrete actions
-  end
+  When('I click on the "Editar el perfil" button') do
+    xpath ='/html/body/div[1]/div/div/div/div/main/article/div/div/div[2]/div/div/div/div/div/div/header/a'
+    find(:xpath, xpath).click
+    end
   
   When('I see “Editar la información de {string} page') do |string|
     pending # Write code here that turns the phrase above into concrete actions
