@@ -4,15 +4,15 @@ Feature: Profile
     I want to see my account details
 
 Background:
-    Given I have browsed to the Rottweiler’s Academy course page
+    Given I have browsed to the Rottweiler’s Academy login page
     And I see the Rottweiler’s Academy page
-    And I click on the button that says <username>
+    And I click on the button that says "<username>"
 
 Scenario Outline: Correct account details
 
-    Given I click on the “Perfil” option from the dropdown menu
-    When I click on the “Ver” option from the profile dropdown menu
-    Then I should see all my account details like <name> , <lastname> and <username>
+    Given I click on the "Perfil" option from the dropdown menu
+    When I click on the "Ver" option from the profile dropdown menu
+    Then I should see all my account details like "<name>" , "<lastname>" and "<username>"
 
 Examples:
     | username  | name     | lastname  |
@@ -40,7 +40,7 @@ Examples:
 
 Scenario Outline: Send Messages
 
-    Given I click on the “Mensajes” option from the dropdown menu
+    Given I click on the "Mensajes" option from the dropdown menu
     And I see the inbox page
     When I click on the "Escriba los nombres de una o más personas" text field
     And I write "<user>" 
