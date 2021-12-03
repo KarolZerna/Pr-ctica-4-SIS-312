@@ -11,6 +11,7 @@ Background:
     Then I should see my welcome message "Hola Karol" in the main page
     And I click on "Karol" button that is on the upper right corner of the page
 
+@a
 Scenario: Correct account details
 
     Given I click on the "Ver" option from the profile dropdown menu
@@ -36,7 +37,7 @@ Scenario: Send Messages
     And I click on text box
     And I write on the "hola instructor, saludos" text box
     And I click on the "Enviar" button
-    Then I should see the "Message" on the "Sebastián" chat
+    Then I should see the message sent on the "Sebastián" chat
 
 Scenario Outline: Modify account details with valid data
 
