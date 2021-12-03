@@ -22,7 +22,7 @@ Scenario: Modify account details
     Given I click on the "Ver" option from the profile dropdown menu
     And I see my account profile with details
     When I click on the "Editar el perfil" button
-    And I see “Editar la información de "Details" page
+    And I see "Editar la información" de "Details" page
     And I write "Karol Lenny" on the name field
     And I click the "Guardar los cambios" button
     Then I should see a message with the confirmation "Cambios guardados"
@@ -33,7 +33,8 @@ Scenario: Send Messages
     And I see the inbox page
     When I click on the "Escriba los nombres de una o más personas" text field
     And I write "Sebastián" 
-    And I click on the "hola instructor, saludos" text box
+    And I click on text box
+    And I write on the "hola instructor, saludos" text box
     And I click on the "Enviar" button
     Then I should see the "Message" on the "Sebastián" chat
 
