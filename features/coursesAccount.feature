@@ -32,7 +32,7 @@ Scenario: Visualice content from a lesson
     Then I click on the lesson Entradas y salidas Digitales
     And I should see a youtube video and a description that says "Veremos como usar las entradas y salidas digitales para detectar cuando se presiona un pulsador y encender un LED."
 
-Scenario: Desmarcar una lección como completada
+Scenario: Uncheck a lesson as completed
     Given I have browsed to the Rottweiler’s Academy course page
     And I scroll the page
     And I see the Rottweiler’s Academy full course catalog with "Cursos" title
@@ -45,7 +45,7 @@ Scenario: Desmarcar una lección como completada
     And I should see a youtube video and a description that says "Haremos una breve introducción a la plataforma Arduino permitiendo vislumbrar su increíble potencial y su facilidad de uso."
     And I should see a button that says "Marcar como completado"
 
-Scenario: Marcar un curso como completado
+Scenario: Mark a lesson as completed
     Given I have browsed to the Rottweiler’s Academy course page
     And I scroll the page
     And I see the Rottweiler’s Academy full course catalog with "Cursos" title
