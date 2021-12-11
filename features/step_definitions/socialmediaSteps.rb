@@ -9,4 +9,6 @@ Given('I scroll down to the end of the page') do
   
   Then('I should visit Rottweiler Academy’s Facebook fanpage') do
     visit('https://www.facebook.com/RottweilerGroupSRL/')
+    page.should have_content('@RottweilerGroupSRL')
+    page.should have_content('Grupo Empresarial Rottweiler Bolivia S.R.L')
   end
