@@ -16,7 +16,7 @@ class SignUpPage
 	include PageObject
 	page_url("https://www.r-acad.com/registro/")
 
-	h1(:sign_up_title, :xpath => '/html/body/h1')
+	h1(:sign_up_title, :xpath => '/html/body/div[1]/div/div/div/div/main/article/header/h1')
 	text_field(:mail, id: 'signup_email')
 	text_field(:password, id: 'signup_password')
 	text_field(:confirm_password, :id => 'signup_password_confirm')
